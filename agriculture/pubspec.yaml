@@ -39,6 +39,11 @@ dependencies:
   firebase_core: ^1.21.1
   firebase_storage: ^10.3.7
   cloud_firestore: ^3.4.6
+  get: ^4.6.5
+  weather: ^2.0.1
+  geolocator: ^9.0.1
+  permission_handler: ^10.0.0
+  syncfusion_flutter_charts: ^20.2.46
 
 dev_dependencies:
   flutter_test:
