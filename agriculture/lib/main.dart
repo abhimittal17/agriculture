@@ -2,6 +2,8 @@ import 'package:agriculture/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'login/login.dart';
+
 void main()async {
    WidgetsFlutterBinding.ensureInitialized();
  
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const MyLogin(),
     );
   }
 }
