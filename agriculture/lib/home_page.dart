@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HomeController homeController = Get.put(HomeController());
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: SingleChildScrollView(
@@ -24,13 +23,6 @@ class HomePage extends StatelessWidget {
             WeatherWidget(),
             SizedBox(
               height: 10,
-            ),
-            ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return Container();
-              },
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),

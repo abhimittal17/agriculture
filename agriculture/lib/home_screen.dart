@@ -24,6 +24,7 @@ class MyHomePage extends StatelessWidget {
         () {
           if (homeController.index.value == 0) {
             return HomePage();
+            // return Container();
           } else if (homeController.index.value == 1) {
             return Center(
               child: Text("Mandi"),
