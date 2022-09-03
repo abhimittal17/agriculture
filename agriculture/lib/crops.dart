@@ -19,40 +19,47 @@ class _CropsState extends State<Crops> {
         child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
             stream: FirebaseFirestore.instance.collection('crops').snapshots(),
             builder: (context, snapshot) {
-              return ListView.builder(
-                itemCount: snapshot.data!.docs.length,
-                itemBuilder: (context, index) {
-                  String name = snapshot.data!.docs[index]['name'];
-                  String image = snapshot.data!.docs[index]['imageUrl'];
-                  String season = snapshot.data!.docs[index]['season'];
-                  String water = snapshot.data!.docs[index]['water'];
-                  String temp = snapshot.data!.docs[index]['temp'];
-                  String soil = snapshot.data!.docs[index]['soil'];
-                  String plantation = snapshot.data!.docs[index]['plantation'];
-                  String method = snapshot.data!.docs[index]['method'];
-                  String disease = snapshot.data!.docs[index]['diseases'];
-                  String solutions = snapshot.data!.docs[index]['solution'];
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                return ListView.builder(
+                  itemCount: snapshot.data!.docs.length,
+                  itemBuilder: (context, index) {
+                    String name = snapshot.data!.docs[index]['name'];
+                    String image = snapshot.data!.docs[index]['imageUrl'];
+                    String season = snapshot.data!.docs[index]['season'];
+                    String water = snapshot.data!.docs[index]['water'];
+                    String temp = snapshot.data!.docs[index]['temp'];
+                    String soil = snapshot.data!.docs[index]['soil'];
+                    String plantation =
+                        snapshot.data!.docs[index]['plantation'];
+                    String method = snapshot.data!.docs[index]['method'];
+                    String disease = snapshot.data!.docs[index]['diseases'];
+                    String solutions = snapshot.data!.docs[index]['solution'];
 
-                  return recommended(image, name, season, temp, soil, water,
-                      plantation, method, disease, solutions, context);
-                },
-                //scrollDirection: Axis.vertical,
-                primary: false,
-                // children: <Widget>[
-                //   recommended("assets/rice.jpg", "Rice", "Kharif",
-                //       "22-32 degree Celsius", "Deep clayey and loamy soil"),
-                //   recommended("assets/wheat.jpg", "Wheat", "Rabi",
-                //       " 10-15 degree Celsius ", "Well-drained fertile loamy"),
-                //   recommended("assets/sugarcane.jpg", "Sugarcane", "Kharif",
-                //       " 21-27 degree Celsius ", " Deep rich loamy soil"),
-                //   recommended("assets/tea.jpg", "Tea", "Kharif",
-                //       "20-30 degree Celsius ", "deep friable loamy soil"),
-                //   recommended("assets/coffee.jpg", "Coffee", "Kharif",
-                //       "15-28 degree Celsius ", "deep friable loamy soil"),
-                //   recommended("assets/cotton.jpg", "Cotton", "Kharif",
-                //       "21-30 degree Celsius ", "Black soil of Deccan Plateau"),
-                // ],
-              );
+                    return recommended(image, name, season, temp, soil, water,
+                        plantation, method, disease, solutions, context);
+                  },
+                  //scrollDirection: Axis.vertical,
+                  primary: false,
+                  // children: <Widget>[
+                  //   recommended("assets/rice.jpg", "Rice", "Kharif",
+                  //       "22-32 degree Celsius", "Deep clayey and loamy soil"),
+                  //   recommended("assets/wheat.jpg", "Wheat", "Rabi",
+                  //       " 10-15 degree Celsius ", "Well-drained fertile loamy"),
+                  //   recommended("assets/sugarcane.jpg", "Sugarcane", "Kharif",
+                  //       " 21-27 degree Celsius ", " Deep rich loamy soil"),
+                  //   recommended("assets/tea.jpg", "Tea", "Kharif",
+                  //       "20-30 degree Celsius ", "deep friable loamy soil"),
+                  //   recommended("assets/coffee.jpg", "Coffee", "Kharif",
+                  //       "15-28 degree Celsius ", "deep friable loamy soil"),
+                  //   recommended("assets/cotton.jpg", "Cotton", "Kharif",
+                  //       "21-30 degree Celsius ", "Black soil of Deccan Plateau"),
+                  // ],
+                );
+              }
             }),
       ),
     );
