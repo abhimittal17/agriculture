@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "943849058993",
+    "project_id": "hackathon-128d9",
+    "storage_bucket": "hackathon-128d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943849058993:android:692cb904c0d7295996a890",
+        "android_client_info": {
+          "package_name": "com.example.agriculture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943849058993-6ivf0m6ek24hc78i2dla1gda70g9tul6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agriculture",
+            "certificate_hash": "424e7a362941866c34a0c486ffb6fa66372c8b4e"
+          }
+        },
+        {
+          "client_id": "943849058993-5227qo2cvd4gl939mcs34m9hbeoe4g25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHJ0cUQqhWxWud4VuRbdwKpOFHygpPWYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943849058993-5227qo2cvd4gl939mcs34m9hbeoe4g25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
