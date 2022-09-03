@@ -44,6 +44,9 @@ dependencies:
   geolocator: ^9.0.1
   permission_handler: ^10.0.0
   syncfusion_flutter_charts: ^20.2.46
+  agora_uikit: ^1.0.3
+  
+
 
 dev_dependencies:
   flutter_test:

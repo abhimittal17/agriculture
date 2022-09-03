@@ -1,3 +1,4 @@
+import 'package:agriculture/consultancy.dart';
 import 'package:agriculture/controllers/home_controller.dart';
 import 'package:agriculture/crops.dart';
 import 'package:agriculture/home_page.dart';
@@ -39,9 +40,7 @@ class MyHomePage extends StatelessWidget {
           } else if (homeController.index.value == 3) {
             return Crops();
           } else if (homeController.index.value == 4) {
-            return Center(
-              child: Text("Consulatancy"),
-            );
+            return Consultancy();
           } else {
             return Container();
           }
