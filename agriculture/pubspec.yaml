@@ -39,6 +39,9 @@ dependencies:
   firebase_core: ^1.21.1
   firebase_storage: ^10.3.7
   cloud_firestore: ^3.4.6
+  agora_uikit: ^1.0.3
+  
+
 
 dev_dependencies:
   flutter_test:
