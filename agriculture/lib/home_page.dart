@@ -1,5 +1,7 @@
 import 'package:agriculture/controllers/home_controller.dart';
 import 'package:agriculture/diseases.dart';
+import 'package:agriculture/rentService/full_rent_screen.dart';
+import 'package:agriculture/rentService/view_all_screen.dart';
 import 'package:agriculture/weather_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -53,58 +55,6 @@ class HomePage extends StatelessWidget {
                                   SizedBox(
                                     height: 15,
                                   ),
-                                  // Table(children: [
-                                  //   TableRow(children: [
-                                  //     Text(
-                                  //       "Sr.No",
-                                  //       style: TextStyle(
-                                  //           fontWeight: FontWeight.bold,
-                                  //           fontSize: 16),
-                                  //     ),
-                                  //     Text(
-                                  //       "Crop Name",
-                                  //       style: TextStyle(
-                                  //           fontWeight: FontWeight.bold,
-                                  //           fontSize: 16),
-                                  //     ),
-                                  //     Text(
-                                  //       "Mandi 1",
-                                  //       style: TextStyle(
-                                  //           fontWeight: FontWeight.bold,
-                                  //           fontSize: 16),
-                                  //     ),
-                                  //     Text(
-                                  //       "Mandi 2",
-                                  //       style: TextStyle(
-                                  //           fontWeight: FontWeight.bold,
-                                  //           fontSize: 16),
-                                  //     ),
-                                  //     Text(
-                                  //       "Mandi 3",
-                                  //       style: TextStyle(
-                                  //           fontWeight: FontWeight.bold,
-                                  //           fontSize: 16),
-                                  //     ),
-                                  //   ]),
-                                  //   // TableRow(children: [
-                                  //   //   StreamBuilder(
-                                  //   //     builder: (context, psSnap) {
-                                  //   //       List<Widget> rowList = [
-                                  //   //         Text((i + 1).toString() + ". "),
-                                  //   //         Text(snapshot.data!.docs[i]
-                                  //   //             ['name']),
-                                  //   //         Text(priceSnapshot.data!.docs[0]
-                                  //   //             ['price']),
-                                  //   //         Text(priceSnapshot.data!.docs[1]
-                                  //   //             ['price']),
-                                  //   //         Text(priceSnapshot.data!.docs[2]
-                                  //   //             ['price']),
-                                  //   //       ];
-                                  //   //       return rowList;
-                                  //   //     },
-                                  //   //   )
-                                  //   // ])
-                                  // ]),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -269,43 +219,41 @@ class HomePage extends StatelessWidget {
                         },
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-                        homeController.index.value = 4;
-                      },
-                      child: Card(
-                        color: Colors.yellow.shade100,
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Need Help ?",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                  "Contact a Aggriculture Expert to solve your problems."),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Icon(Icons.arrow_forward))
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
                     SingleChildScrollView(
                       child: Column(
                         children: [
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          SizedBox(
+                              height: 30.0,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Padding(
+                                    padding: EdgeInsets.only(left: 15.0),
+                                    child: Text("MACHINE ON RENT",
+                                        style: TextStyle(
+                                            fontSize: 17.0,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 8.0),
+                                    child: TextButton(
+                                        onPressed: () {
+                                          homeController.index.value = 2;
+                                          // Navigator.push(
+                                          //     context,
+                                          //     MaterialPageRoute(
+                                          //       builder: (context) =>
+                                          //           ViewAllScreen(),
+                                          //     ));
+                                        },
+                                        child: const Text("View All >")),
+                                  )
+                                ],
+                              )),
                           SizedBox(
                             height: 320.0,
                             child: StreamBuilder<dynamic>(
@@ -328,30 +276,29 @@ class HomePage extends StatelessWidget {
                                   itemBuilder: (context, index) {
                                     return GestureDetector(
                                       onTap: () {
-                                        // Navigator.push(
-                                        //     context,
-                                        //     MaterialPageRoute(
-                                        //       builder: (context) =>
-                                        //     FullRentScreen(
-                                        //   url: snapshot.data.docs[index]
-                                        //       ['url'],
-                                        //   address: snapshot.data
-                                        //       .docs[index]['address'],
-                                        //   day: snapshot.data.docs[index]
-                                        //       ['day'],
-                                        //   Description: snapshot.data
-                                        //       .docs[index]['description'],
-                                        //   machinename: snapshot
-                                        //       .data.docs[index]['name'],
-                                        //   price: snapshot.data.docs[index]
-                                        //       ['price'],
-                                        //   phone: snapshot.data.docs[index]
-                                        //       ['phone'],
-                                        //   sellername: snapshot.data
-                                        //       .docs[index]['sellername'],
-                                        // ),
-                                        // )
-                                        // );
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  FullRentScreen(
+                                                url: snapshot.data.docs[index]
+                                                    ['url'],
+                                                address: snapshot.data
+                                                    .docs[index]['address'],
+                                                day: snapshot.data.docs[index]
+                                                    ['day'],
+                                                Description: snapshot.data
+                                                    .docs[index]['description'],
+                                                machinename: snapshot
+                                                    .data.docs[index]['name'],
+                                                price: snapshot.data.docs[index]
+                                                    ['price'],
+                                                phone: snapshot.data.docs[index]
+                                                    ['phone'],
+                                                sellername: snapshot.data
+                                                    .docs[index]['sellername'],
+                                              ),
+                                            ));
                                       },
                                       child: Padding(
                                         padding: const EdgeInsets.symmetric(
@@ -496,6 +443,43 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        homeController.index.value = 4;
+                      },
+                      child: Card(
+                        color: Colors.yellow.shade100,
+                        child: Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Need Help ?",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                  "Contact a Aggriculture Expert to solve your problems."),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(Icons.arrow_forward))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                     SizedBox(
                       height: 10,

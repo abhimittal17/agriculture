@@ -3,6 +3,7 @@ import 'package:agriculture/controllers/home_controller.dart';
 import 'package:agriculture/crops.dart';
 import 'package:agriculture/home_page.dart';
 import 'package:agriculture/mandi_screen.dart';
+import 'package:agriculture/rentService/view_all_screen.dart';
 import 'package:agriculture/weather_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -34,9 +35,7 @@ class MyHomePage extends StatelessWidget {
             //   child: Text("Mandi"),
             // );
           } else if (homeController.index.value == 2) {
-            return Center(
-              child: Text("Machine Rental"),
-            );
+            return ViewAllScreen();
           } else if (homeController.index.value == 3) {
             return Crops();
           } else if (homeController.index.value == 4) {

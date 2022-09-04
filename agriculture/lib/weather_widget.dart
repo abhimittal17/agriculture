@@ -24,27 +24,24 @@ class WeatherWidget extends StatelessWidget {
                   child: Column(
                     children: [
                       Expanded(
-                        child: Container(
-                          color: Colors.blue.shade50,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.location_pin,
-                                      size: 15,
-                                    ),
-                                    Text(weatherController.weatherMap['city']),
-                                  ],
-                                ),
-                                Text(weatherController.weatherMap['time']
-                                    .toString()
-                                    .substring(11, 16))
-                              ],
-                            ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_pin,
+                                    size: 15,
+                                  ),
+                                  Text(weatherController.weatherMap['city']),
+                                ],
+                              ),
+                              Text(weatherController.weatherMap['time']
+                                  .toString()
+                                  .substring(11, 16))
+                            ],
                           ),
                         ),
                       ),

@@ -1,6 +1,8 @@
+import 'package:agriculture/authServices/login/login.dart';
 import 'package:agriculture/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
@@ -10,7 +12,7 @@ void main() async {
 
   await Permission.location.request();
 
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,12 +23,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Aggriculture',
+      title: 'Agriculture',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.green.shade50,
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(),
+      home: MyLogin(),
     );
   }
 }

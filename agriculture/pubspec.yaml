@@ -45,6 +45,9 @@ dependencies:
   permission_handler: ^10.0.0
   syncfusion_flutter_charts: ^20.2.46
   agora_uikit: ^1.0.3
+  flutter_riverpod: ^1.0.4
+  dio: ^4.0.6
+  file_picker: ^5.0.1
   
 
 
@@ -74,6 +77,7 @@ flutter:
   assets:
     - assets/
     - assets/cropIcons/
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
