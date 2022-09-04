@@ -49,7 +49,7 @@ class _DiseasesState extends State<Diseases> {
                   SingleChildScrollView(
                     child: Column(
                       children: <Widget>[
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
@@ -67,79 +67,79 @@ class _DiseasesState extends State<Diseases> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 20,
                               ),
                               Text(
                                 '${widget.crop_name}',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 40, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(height: 20),
-                              Text('DESCRIPTION:',
+                              const SizedBox(height: 20),
+                              const Text('DESCRIPTION:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text('${widget.season}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('WATER REQUIRED:',
+                              const SizedBox(height: 20),
+                              const Text('WATER REQUIRED:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("'${widget.water}'",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('TEMPERATURE:',
+                              const SizedBox(height: 20),
+                              const Text('TEMPERATURE:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.Temperature}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('SOIL QUALITY REQUIRED:',
+                              const SizedBox(height: 20),
+                              const Text('SOIL QUALITY REQUIRED:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.Soil_quality}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('METHOD TO GROW:',
+                              const SizedBox(height: 20),
+                              const Text('METHOD TO GROW:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.method}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('PLANTATION:',
+                              const SizedBox(height: 20),
+                              const Text('PLANTATION:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.plantation}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('DISEASE:',
+                              const SizedBox(height: 20),
+                              const Text('DISEASE:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.disease}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
-                              Text('SOLUTION:',
+                              const SizedBox(height: 20),
+                              const Text('SOLUTION:',
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20)),
                               const SizedBox(height: 8),
                               Text("${widget.solutions}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 17)),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                             ],
                           ),
                         )

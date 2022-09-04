@@ -79,7 +79,7 @@ Widget card(String imgpath, String name, String post, BuildContext context) {
                               post: post,
                             )));
               },
-              child: Icon(
+              child: const Icon(
                 Icons.video_call,
                 size: 30,
               ),

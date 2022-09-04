@@ -43,11 +43,11 @@ class _Consultant_infoState extends State<Consultant_info> {
         ),
         Text(
           name,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         Text(
           post,
-          style: TextStyle(fontSize: 16, color: Colors.black),
+          style: const TextStyle(fontSize: 16, color: Colors.black),
         ),
         const SizedBox(
           height: 16,

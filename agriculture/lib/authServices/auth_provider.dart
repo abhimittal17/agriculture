@@ -4,7 +4,6 @@ import 'package:agriculture/home_screen.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Auth extends ChangeNotifier {
@@ -19,7 +18,7 @@ class Auth extends ChangeNotifier {
       if (response.statusCode == 200) {
         SharedPreferences sharedPreferences =
             await SharedPreferences.getInstance();
-        var pref = SharedPreferences.getInstance();
+      
 
         // print(response);
         userdata = jsonDecode(response.data);
@@ -32,7 +31,7 @@ class Auth extends ChangeNotifier {
         if (userdata['message'] == "Successful") {
           print("success");
           Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) => MyHomePage()),
+              MaterialPageRoute(builder: (context) =>const MyHomePage()),
               (route) => false);
         }
       }
@@ -59,7 +58,7 @@ class Auth extends ChangeNotifier {
         print(userdata);
         if (userdata['message'] == "Successful") {
           Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) => MyHomePage()),
+              MaterialPageRoute(builder: (context) => const MyHomePage()),
               (route) => false);
         }
         print(response);
