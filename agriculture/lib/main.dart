@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
       title: 'Agriculture',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.green.shade50,
-        primarySwatch: Colors.green,
+        primarySwatch:Colors.green,
       ),
-      home: MyLogin(),
+      home: MyHomePage(),
     );
   }
 }

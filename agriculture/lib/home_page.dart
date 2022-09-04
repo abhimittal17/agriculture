@@ -466,7 +466,7 @@ class HomePage extends StatelessWidget {
                                 height: 5,
                               ),
                               Text(
-                                  "Contact a Aggriculture Expert to solve your problems."),
+                                  "Contact an Agriculture Expert to solve your problems."),
                               SizedBox(
                                 height: 10,
                               ),
@@ -555,7 +555,7 @@ class HomePage extends StatelessWidget {
                                           Text("Crops: 34%"),
                                           Icon(
                                             Icons.arrow_upward,
-                                            color: Colors.green,
+                                            color: Color(0xff12A278),
                                           )
                                         ],
                                       ),

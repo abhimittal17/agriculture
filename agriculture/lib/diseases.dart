@@ -42,7 +42,7 @@ class _DiseasesState extends State<Diseases> {
         elevation: 1,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          color: Colors.green.shade100,
+          color: Color(0xff12A278),
           onPressed: () {},
         ),
       ),

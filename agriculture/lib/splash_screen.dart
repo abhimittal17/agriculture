@@ -31,7 +31,7 @@ class _SplashState extends State<Splash>{
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration:BoxDecoration(
-                color:Colors.green,
+                color:Color(0xff12A278),
                 image:DecorationImage(
                   image: AssetImage('images/app_logo.jpg'),
                   fit:BoxFit.cover,

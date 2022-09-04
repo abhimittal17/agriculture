@@ -20,7 +20,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xff40b93c),
         title: Text(
-          "Aggriculture",
+          "Agriculture",
         ),
         actions: [CircleAvatar()],
       ),

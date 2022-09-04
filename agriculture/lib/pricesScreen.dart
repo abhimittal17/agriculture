@@ -50,7 +50,7 @@ class PriceScreen extends StatelessWidget {
                                   snapshot.data!.docs[1]['percent'] > 0
                                       ? Icon(
                                           Icons.arrow_upward,
-                                          color: Colors.green,
+                                          color: Color(0xff12A278),
                                         )
                                       : Icon(
                                           Icons.arrow_downward,
