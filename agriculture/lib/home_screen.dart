@@ -1,6 +1,7 @@
 import 'package:agriculture/consultancy.dart';
 import 'package:agriculture/controllers/home_controller.dart';
 import 'package:agriculture/crops.dart';
+import 'package:agriculture/edit.page.dart';
 import 'package:agriculture/home_page.dart';
 import 'package:agriculture/mandi_screen.dart';
 import 'package:agriculture/rentService/view_all_screen.dart';
@@ -20,9 +21,22 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xff40b93c),
         title: Text(
-          "Aggriculture",
+          "Agro Solution",
         ),
-        actions: [CircleAvatar()],
+        actions: [
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Edit(),
+                    ));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: CircleAvatar(child: Text("A")),
+              ))
+        ],
       ),
       body: Obx(
         () {
@@ -56,9 +70,9 @@ class MyHomePage extends StatelessWidget {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.fire_truck), label: "Machine Rental"),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.abc), label: "About Crops"),
+                    icon: Icon(Icons.info), label: "About Crops"),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.read_more), label: "Consultancy"),
+                    icon: Icon(Icons.camera_alt), label: "Consultancy"),
               ])),
     );
   }

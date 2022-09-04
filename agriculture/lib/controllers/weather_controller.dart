@@ -20,7 +20,7 @@ class WeatherController extends GetxController {
     getCurrentPosition();
     Weather w = await wf.currentWeatherByLocation(lat.value, lon.value);
 
-    weatherMap.addAll({
+   weatherMap.addAll({
       'weather': w.weatherMain,
       'city': w.areaName,
       'icon': "http://openweathermap.org/img/w/${w.weatherIcon}.png",

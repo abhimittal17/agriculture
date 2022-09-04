@@ -75,7 +75,7 @@ class MyRegister extends ConsumerWidget {
                         if (text == null || text.isEmpty) {
                           return 'phone no is required';
                         }
-                        if (text.length < 10) {
+                        if (text.length < 10 || text.length > 10) {
                           return 'Enter correct phone No';
                         }
                         return null;
@@ -86,6 +86,7 @@ class MyRegister extends ConsumerWidget {
                     ),
                     TextFormField(
                       controller: passwordcontroller,
+                      obscureText: true,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.grey.shade100,
@@ -96,6 +97,9 @@ class MyRegister extends ConsumerWidget {
                       validator: (text) {
                         if (text == null || text.isEmpty) {
                           return 'Password is required';
+                        }
+                        if (text.length < 6) {
+                          return 'Minimum 6 characters required';
                         }
                         return null;
                       },

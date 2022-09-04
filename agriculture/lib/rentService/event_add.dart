@@ -13,7 +13,7 @@ class EventAdd extends ConsumerWidget {
   TextEditingController pricecontroller = TextEditingController();
   TextEditingController daycontroller = TextEditingController();
   GlobalKey<FormState> globalKey = GlobalKey();
-String url='';
+  String url = '';
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = ref.watch(imageserviceprovider);
@@ -35,9 +35,9 @@ String url='';
                       children: [
                         GestureDetector(
                           onTap: () async {
-                            var file=await provider.getimage();
-                           url= await provider.uploadImageToStorage(context, file!);
-
+                            var file = await provider.getimage();
+                            url = await provider.uploadImageToStorage(
+                                context, file!);
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(vertical: 60),
@@ -148,20 +148,31 @@ String url='';
                 children: [
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () async{
-                        if(url.isEmpty){
+                      onPressed: () async {
+                        if (url.isEmpty) {
                           print("please select image");
-                        }else{
-                        await FirebaseFirestore.instance.collection("reqrentmachine").doc().set({
-                          "phone":"1112223333",
-                          "address":addresscontroller.text,
-                          "description":descriptioncontroller.text,
-                          "url":url,
-                          "name":machinecontroller.text,
-                          "sellername":"harry",
-                          "price":pricecontroller.text,
-                          "days":daycontroller.text
-                        });}
+                        } else {
+                          try {
+                            await FirebaseFirestore.instance
+                                .collection("reqrentmachine")
+                                .doc()
+                                .set({
+                              "phone": "1112223333",
+                              "address": addresscontroller.text,
+                              "description": descriptioncontroller.text,
+                              "url": url,
+                              "name": machinecontroller.text,
+                              "sellername": "harry",
+                              "price": pricecontroller.text,
+                              "days": daycontroller.text
+                            });
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text("Success")));
+                          } on FirebaseException catch (e) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(e.toString())));
+                          }
+                        }
                       },
                       style:
                           ElevatedButton.styleFrom(primary: Color(0xff12A278)),

@@ -59,92 +59,480 @@ class HomePage extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text(
-                                        "Sr.No",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                      Column(
+                                        children: [
+                                          Text(
+                                            "",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            "Mandi 1",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            "Mandi 2",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            "Mandi 3",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            "Mandi 4",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            "Mandi 5",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
                                       ),
-                                      Text(
-                                        "Crop Name",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
-                                      Text(
-                                        "Mandi 1",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
-                                      Text(
-                                        "Mandi 2",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
-                                      Text(
-                                        "Mandi 3",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('wheat')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Wheat",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('rice')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Rice",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('coffee')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Coffee",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('cotton')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Cotton",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('tea')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Tea",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
+                                      StreamBuilder<
+                                              QuerySnapshot<
+                                                  Map<String, dynamic>>>(
+                                          stream: FirebaseFirestore.instance
+                                              .collection('crops')
+                                              .doc('sugarcane')
+                                              .collection('mandiPrice')
+                                              .snapshots(),
+                                          builder: (context, snapshot) {
+                                            if (snapshot.connectionState ==
+                                                ConnectionState.waiting) {
+                                              return Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              );
+                                            } else {
+                                              return Column(
+                                                children: [
+                                                  Text(
+                                                    "Sugarcane",
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[0]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[1]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[2]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[3]
+                                                      ['price']),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Text(snapshot.data!.docs[4]
+                                                      ['price']),
+                                                ],
+                                              );
+                                            }
+                                          }),
                                     ],
                                   ),
                                   SizedBox(
-                                    // width: 250,
-                                    height: 240,
-                                    child: ListView.builder(
-                                      itemCount: snapshot.data!.docs.length,
-                                      itemBuilder: (context, index) {
-                                        return Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10, vertical: 10),
-                                          child: StreamBuilder<
-                                                  QuerySnapshot<
-                                                      Map<String, dynamic>>>(
-                                              stream: FirebaseFirestore.instance
-                                                  .collection('crops')
-                                                  .doc(snapshot
-                                                      .data!.docs[index]['name']
-                                                      .toString()
-                                                      .toLowerCase())
-                                                  .collection('mandiPrice')
-                                                  .snapshots(),
-                                              builder:
-                                                  (context, priceSnapshot) {
-                                                if (priceSnapshot
-                                                        .connectionState ==
-                                                    ConnectionState.waiting) {
-                                                  return Center(
-                                                    child:
-                                                        CircularProgressIndicator(),
-                                                  );
-                                                } else {
-                                                  return Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceAround,
-                                                    children: [
-                                                      Text((index + 1)
-                                                              .toString() +
-                                                          ". "),
-                                                      Text(snapshot.data!
-                                                          .docs[index]['name']),
-                                                      Text(priceSnapshot.data!
-                                                          .docs[0]['price']),
-                                                      Text(priceSnapshot.data!
-                                                          .docs[1]['price']),
-                                                      Text(priceSnapshot.data!
-                                                          .docs[2]['price']),
-                                                    ],
-                                                  );
-                                                }
-                                              }),
-                                        );
-                                      },
-                                    ),
+                                    height: 15,
                                   )
+                                  // Row(
+                                  //   mainAxisAlignment:
+                                  //       MainAxisAlignment.spaceBetween,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Sr.No",
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold,
+                                  //           fontSize: 16),
+                                  //     ),
+                                  //     Text(
+                                  //       "Crop Name",
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold,
+                                  //           fontSize: 16),
+                                  //     ),
+                                  //     Text(
+                                  //       "Mandi 1",
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold,
+                                  //           fontSize: 16),
+                                  //     ),
+                                  //     Text(
+                                  //       "Mandi 2",
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold,
+                                  //           fontSize: 16),
+                                  //     ),
+                                  //     Text(
+                                  //       "Mandi 3",
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold,
+                                  //           fontSize: 16),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // SizedBox(
+                                  //   // width: 250,
+                                  //   height: 240,
+                                  //   child: ListView.builder(
+                                  //     itemCount: snapshot.data!.docs.length,
+                                  //     itemBuilder: (context, index) {
+                                  //       return Padding(
+                                  //         padding: const EdgeInsets.symmetric(
+                                  //             horizontal: 10, vertical: 10),
+                                  //         child: StreamBuilder<
+                                  //                 QuerySnapshot<
+                                  //                     Map<String, dynamic>>>(
+                                  //             stream: FirebaseFirestore.instance
+                                  //                 .collection('crops')
+                                  //                 .doc(snapshot
+                                  //                     .data!.docs[index]['name']
+                                  //                     .toString()
+                                  //                     .toLowerCase())
+                                  //                 .collection('mandiPrice')
+                                  //                 .snapshots(),
+                                  //             builder:
+                                  //                 (context, priceSnapshot) {
+                                  //               if (priceSnapshot
+                                  //                       .connectionState ==
+                                  //                   ConnectionState.waiting) {
+                                  //                 return Center(
+                                  //                   child:
+                                  //                       CircularProgressIndicator(),
+                                  //                 );
+                                  //               } else {
+                                  //                 return Row(
+                                  //                   mainAxisAlignment:
+                                  //                       MainAxisAlignment
+                                  //                           .spaceAround,
+                                  //                   children: [
+                                  //                     Text((index + 1)
+                                  //                             .toString() +
+                                  //                         ". "),
+                                  //                     Text(snapshot.data!
+                                  //                         .docs[index]['name']),
+                                  //                     Text(priceSnapshot.data!
+                                  //                         .docs[0]['price']),
+                                  //                     Text(priceSnapshot.data!
+                                  //                         .docs[1]['price']),
+                                  //                     Text(priceSnapshot.data!
+                                  //                         .docs[2]['price']),
+                                  //                   ],
+                                  //                 );
+                                  //               }
+                                  //             }),
+                                  //       );
+                                  //     },
+                                  //   ),
+                                  // )
                                 ],
                               ),
                             )),
@@ -534,84 +922,79 @@ class HomePage extends StatelessWidget {
                         SizedBox(
                           height: 190,
                           width: 190,
-                          child: Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  // width: 200,
-                                  height: 60,
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text("Crops: 34%"),
-                                          Icon(
-                                            Icons.arrow_upward,
-                                            color: Colors.green,
-                                          )
-                                        ],
-                                      ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                // width: 200,
+                                height: 60,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 10),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text("Crops: 34%"),
+                                        Icon(
+                                          Icons.arrow_upward,
+                                          color: Colors.green,
+                                        )
+                                      ],
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  // width: 200,
-                                  height: 60,
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text("Vegetables: -10%"),
-                                          Icon(
-                                            Icons.arrow_downward,
-                                            color: Colors.red,
-                                          )
-                                        ],
-                                      ),
+                              ),
+                              SizedBox(
+                                // width: 200,
+                                height: 60,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 10),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text("Vegetables: -10%"),
+                                        Icon(
+                                          Icons.arrow_downward,
+                                          color: Colors.red,
+                                        )
+                                      ],
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  // width: 200,
-                                  height: 60,
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text("Fruits: 15%"),
-                                          Icon(
-                                            Icons.arrow_upward,
-                                            color: Colors.green,
-                                          )
-                                        ],
-                                      ),
+                              ),
+                              SizedBox(
+                                // width: 200,
+                                height: 60,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 10),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text("Fruits: 15%"),
+                                        Icon(
+                                          Icons.arrow_upward,
+                                          color: Colors.green,
+                                        )
+                                      ],
                                     ),
                                   ),
-                                )
-                              ],
-                            ),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ],

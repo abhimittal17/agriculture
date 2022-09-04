@@ -77,6 +77,7 @@ class MyLogin extends ConsumerWidget {
                     ),
                     TextFormField(
                       controller: passwordcontroller,
+                      obscureText: true,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.grey.shade100,
@@ -111,7 +112,7 @@ class MyLogin extends ConsumerWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         islogin
-                            ? const CircularProgressIndicator()
+                            ? Center(child: const CircularProgressIndicator())
                             : ElevatedButton(
                                 onPressed: () async {
                                   if (globalKey.currentState!.validate()) {

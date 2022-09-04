@@ -10,7 +10,11 @@ class MandiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(
+            "Mandi Prices:",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
           Wrap(
             children: [
               InkWell(
