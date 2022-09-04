@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    checkLogin() async {
-//      SharedPreferences pref=await SharedPreferences.getInstance();
-//     if(pref.getString('username')!.isEmpty){
-// return false;
-//     }else{
-//       return true;
+//     checkLogin() async {
+// //      SharedPreferences pref=await SharedPreferences.getInstance();
+// //     if(pref.getString('username')!.isEmpty){
+// // return false;
+// //     }else{
+// //       return true;
+// //     }
 //     }
-    }
     EditController editController = Get.put(EditController());
     return MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -69,7 +69,7 @@ class MyRegister extends ConsumerWidget {
                         fillColor: Colors.grey.shade100,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        hintText: 'phone no ',
+                        hintText: 'Phone no ',
                       ),
                       validator: (text) {
                         if (text == null || text.isEmpty) {
@@ -92,7 +92,7 @@ class MyRegister extends ConsumerWidget {
                         fillColor: Colors.grey.shade100,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        hintText: 'password ',
+                        hintText: 'Password ',
                       ),
                       validator: (text) {
                         if (text == null || text.isEmpty) {
