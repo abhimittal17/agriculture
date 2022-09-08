@@ -12,8 +12,9 @@ class MyLogin extends ConsumerWidget {
   MyLogin({Key? key}) : super(key: key);
 
    GlobalKey<FormState> globalKey = GlobalKey();
-   TextEditingController phonecontroller = TextEditingController();
-   TextEditingController passwordcontroller = TextEditingController();
+   TextEditingController phonecontroller = TextEditingController(text: "1111122222");
+   TextEditingController passwordcontroller = TextEditingController(text: "123456");
+
   bool islogin = false;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
