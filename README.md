@@ -31,5 +31,5 @@ Members:
 2. Keshav Saini DCH-8017
 3. Ridhem Gawri DCH-8041
 4. Harjot Singh DCH-8022
-5. Abhi Mittal (uid not available)
+5. Abhi Mittal DCH-8029
 
