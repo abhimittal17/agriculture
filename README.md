@@ -18,7 +18,7 @@ Agriculture
 
 ### Project:
 Video Link: https://drive.google.com/drive/folders/1IonbrCxpvgbPhvruNL7qwaZfn75H6UOf?usp=sharing
-[Agriculture.pdf](https://github.com/abhimittal17/agriculture/files/9484225/Agriculture.pdf)
+Presenntation:[Agriculture.pdf](https://github.com/abhimittal17/agriculture/files/9484225/Agriculture.pdf)
 
 
 
