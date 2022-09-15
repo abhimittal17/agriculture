@@ -18,11 +18,11 @@ Agriculture
 
 ### Project:
 Video Link: https://drive.google.com/drive/folders/1IonbrCxpvgbPhvruNL7qwaZfn75H6UOf?usp=sharing
-Presenntation:[Agriculture.pdf](https://github.com/abhimittal17/agriculture/files/9484225/Agriculture.pdf)
 
 
 
-Presentaion on project:
+
+Presentaion on project:[Agriculture.pdf](https://github.com/abhimittal17/agriculture/files/9484225/Agriculture.pdf)
 ### Team Details:
 Teamn no.- 7
 Total Members - 5
