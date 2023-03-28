@@ -46,7 +46,7 @@ dependencies:
   syncfusion_flutter_charts: ^20.2.46
   agora_uikit: ^1.0.3
   flutter_riverpod: ^1.0.4
-  dio: ^4.0.6
+  dio: ^5.0.3
   file_picker: ^5.0.1
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0
