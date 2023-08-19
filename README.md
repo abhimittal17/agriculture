@@ -27,9 +27,10 @@ Presentaion on project:[Agriculture.pdf](https://github.com/abhimittal17/agricul
 Teamn no.- 7
 Total Members - 5
 Members:
-1. Harpreet Singh DCH-8023
-2. Keshav Saini DCH-8017
-3. Ridhem Gawri DCH-8041
-4. Harjot Singh DCH-8022
-5. Abhi Mittal DCH-8029
+1. Harjot Singh DCH-8022
+2. Abhi Mittal DCH-8029
+3. Harpreet Singh DCH-8023
+4. Keshav Saini DCH-8017
+5. Ridhem Gawri DCH-8041
+
 
