@@ -23,14 +23,6 @@ Video Link: https://drive.google.com/drive/folders/1IonbrCxpvgbPhvruNL7qwaZfn75H
 
 
 Presentaion on project:[Agriculture.pdf](https://github.com/abhimittal17/agriculture/files/9484225/Agriculture.pdf)
-### Team Details:
-Teamn no.- 7
-Total Members - 5
-Members:
-1. Harjot Singh DCH-8022
-2. Abhi Mittal DCH-8029
-3. Harpreet Singh DCH-8023
-4. Keshav Saini DCH-8017
-5. Ridhem Gawri DCH-8041
+
 
 
